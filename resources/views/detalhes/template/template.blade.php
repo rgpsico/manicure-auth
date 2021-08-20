@@ -41,8 +41,8 @@
         <div class="detail_box">
           <div class="detail_head">
             <h3><br>
-               {{ $users->name}} </h3>
-            <p>  {{ $users->descricao}} </p>
+               {{isset($users->name) ? $users->name : "0" }} </h3>
+            <p>  {{isset($users->descricao) ? $users->descricao : "0"}} </p>
             <ul class="list-unstyled text-capitalize m-b-0 m-t-15">
       
             </ul>
@@ -70,7 +70,7 @@
             </ul>
           </div>
           <div class="detail_btn d-flex m-t-20">
-            <a href=" https://api.whatsapp.com/send?phone={{$users->Wathasap}}">
+            <a href=" https://api.whatsapp.com/send?phone={{isset($users->Wathasap) ? $users->Wathasap : "0"}}">
                 <button class="btn_chat w-100 text-white py-2 border-0" type="submit" value="button"> 
                   <i class="fa fa-phone"></i> Chamar</button>
             </a>  
@@ -99,7 +99,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="description_box">
-          {{ $users->descricao}}         
+          {{ isset($users->descricao) ? $users->descricao : "0" }}         
         </div>
       </div>
       <div class="col-md-3">
