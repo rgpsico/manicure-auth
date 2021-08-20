@@ -11,12 +11,11 @@
     <div class="row">
       
       
-      @foreach ($users as $user)
-       
-   
+      @foreach ($users as $user)       
+    
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="featured-parts rounded m-t-30">
-            <a href="show/{{$user->id}}">
+            <a href="show/{{$user->id_user}}">
             <div class="featured-img">
                 <img class="img-fluid rounded-top" src="storage/avatars/{{$user->avatar}}" alt="Classified Plus"/>
           

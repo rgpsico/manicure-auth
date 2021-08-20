@@ -22,11 +22,12 @@ class SiteController extends Controller
     {         
     $bairro   = ($request->get('bairro') == null ? "" : $request->get('bairro') );  
     $dados    =  new Dados;
-    $users    =  User::all()->where('status','ativado');
-   
+    $users    =  $this->user->Dados();
+
 
       if($bairro){         
           $users = $this->user->filtro($bairro);
+      
       }
         
     return view('site.template.template',compact('users'));
@@ -37,6 +38,7 @@ class SiteController extends Controller
         $user = new User;
         $users = $user->show($id);
         $album = $user->album($id);
+  
         return view('detalhes.template.template',compact('users','album'));
     }
 }

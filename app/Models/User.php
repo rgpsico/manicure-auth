@@ -55,9 +55,10 @@ class User extends Authenticatable
     {
         return $users = DB::table('users')
         ->join('dados', 'users.id', '=', 'dados.id_user')
-        ->select('users.*', 'dados.id_user','dados.Wathasap','dados.bairro')
+        ->select('users.*', 'dados.*')
         ->where('bairro',$bairro)
         ->get();
+
     }
 
     public function show($id)
