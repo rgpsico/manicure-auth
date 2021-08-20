@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
- protected $table = "Album";
+ protected $table = "album";
  public $timestamps = null;
 
  public function images()
