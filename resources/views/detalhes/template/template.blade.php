@@ -24,10 +24,10 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
         <div class="detail_box"> 
-          <img class="img-fluid img-principal" src="../storage/avatars/{{isset($users->avatar) ? $users->avatar : '0' }}" alt="{{$users->name}}" width="500" height="255">
+          <img class="img-fluid img-principal" src="../storage/avatars/{{isset($users->avatar) ? $users->avatar : '0' }}" alt="{{isset($users->name) ? $users->name : '0' }}" width="500" height="255">
           <div class="m-t-20">
             <ul class="owl-carousel list-unstyled m-b-0" id="product_slider">
-              <li><img class="img-fluid" src="../storage/avatars/{{$users->avatar}}" > </li>
+              <li><img class="img-fluid" src="../storage/avatars/{{isset($users->avatar) ?  $users->avatar : "0"}}" > </li>
                  @foreach ($album as $image)                    
                     <li style="height:80px; width:100px;"><img class="img-fluid" src="../storage/uploads/{{$image->image}}" width="100" height="80"> </li>
                 @endforeach
