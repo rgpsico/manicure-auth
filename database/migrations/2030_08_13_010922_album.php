@@ -13,7 +13,7 @@ class Album extends Migration
      */
     public function up()
     {
-        Schema::create('Album', function (Blueprint $table) {
+        Schema::create('album', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
