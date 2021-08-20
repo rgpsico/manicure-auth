@@ -13,7 +13,7 @@ class Dados extends Migration
      */
     public function up()
     {
-        Schema::create('Dados', function (Blueprint $table) {
+        Schema::create('dados', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Wathasap');
             $table->string('bairro'); 
