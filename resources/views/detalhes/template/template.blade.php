@@ -17,7 +17,7 @@
   </div>
 </div>
 <!-- End breadcrumb -->
-
+{{dd($users)}}
 <!-- Detail_part -->
 <section class="detail_part m-t-50">
   <div class="container">
