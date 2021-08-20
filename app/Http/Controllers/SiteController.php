@@ -35,6 +35,8 @@ class SiteController extends Controller
         $user = new User;
         $users = $user->show($id);
         $album = $user->album($id);
+
+        dd($users);
   
         return view('detalhes.template.template',compact('users','album'));
     }
