@@ -24,10 +24,10 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
         <div class="detail_box"> 
-          <img class="img-fluid img-principal" src="../storage/avatars/{{isset($users->avatar) ? $users->avatar : '0' }}" alt="{{isset($users->name) ? $users->name : '0' }}" width="500" height="255">
+          <img class="img-fluid img-principal" src="../storage/avatars/{{$users->avatar}}" alt="{{$users->name}}" width="500" height="255">
           <div class="m-t-20">
             <ul class="owl-carousel list-unstyled m-b-0" id="product_slider">
-              <li><img class="img-fluid" src="../storage/avatars/{{isset($users->avatar) ?  $users->avatar : "0"}}" > </li>
+              <li><img class="img-fluid" src="../storage/avatars/{{$users->avatar}}" > </li>
                  @foreach ($album as $image)                    
                     <li style="height:80px; width:100px;"><img class="img-fluid" src="../storage/uploads/{{$image->image}}" width="100" height="80"> </li>
                 @endforeach
@@ -41,8 +41,8 @@
         <div class="detail_box">
           <div class="detail_head">
             <h3><br>
-               {{isset($users->name) ? $users->name : "0" }} </h3>
-            <p>  {{isset($users->descricao) ? $users->descricao : "0"}} </p>
+               {{ $users->name}} </h3>
+            <p>  {{ $users->descricao}} </p>
             <ul class="list-unstyled text-capitalize m-b-0 m-t-15">
       
             </ul>
@@ -70,7 +70,7 @@
             </ul>
           </div>
           <div class="detail_btn d-flex m-t-20">
-            <a href=" https://api.whatsapp.com/send?phone={{isset($users->Wathasap) ? $users->Wathasap : "0"}}">
+            <a href=" https://api.whatsapp.com/send?phone={{$users->Wathasap}}">
                 <button class="btn_chat w-100 text-white py-2 border-0" type="submit" value="button"> 
                   <i class="fa fa-phone"></i> Chamar</button>
             </a>  
@@ -99,7 +99,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="description_box">
-          {{ isset($users->descricao) ? $users->descricao : "0" }}         
+          {{ $users->descricao}}         
         </div>
       </div>
       <div class="col-md-3">
