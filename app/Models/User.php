@@ -46,16 +46,16 @@ class User extends Authenticatable
     public function Dados()
     {
         return $users = DB::table('users')
-        ->join('dados', 'users.id', '=', 'dados.id_user')
-        ->select('users.*', 'dados.*')
+        ->join('Dados', 'users.id', '=', 'Dados.id_user')
+        ->select('users.*', 'Dados.*')
         ->get();
     }
 
     public function filtro($bairro)
     {
         return $users = DB::table('users')
-        ->join('dados', 'users.id', '=', 'dados.id_user')
-        ->select('users.*', 'dados.*')
+        ->join('Dados', 'users.id', '=', 'Dados.id_user')
+        ->select('users.*', 'Dados.*')
         ->where('bairro',$bairro)
         ->get();
 
@@ -64,8 +64,8 @@ class User extends Authenticatable
     public function show($id)
     {
         return $users = DB::table('users')
-        ->join('dados', 'users.id', '=', 'dados.id_user')
-        ->select('users.*', 'dados.*')
+        ->join('Dados', 'users.id', '=', 'Dados.id_user')
+        ->select('users.*', 'Dados.*')
         ->where('id_user',$id)
         ->where('status','ativado')
         ->first();
@@ -81,6 +81,6 @@ class User extends Authenticatable
 
     public function Dado()
     {
-        return $this->hasOne(Dados::class);
+        return $this->hasOne(Dados::class,'id_user','id');
     }
 }

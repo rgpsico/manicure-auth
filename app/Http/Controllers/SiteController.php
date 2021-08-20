@@ -19,17 +19,14 @@ class SiteController extends Controller
     }
   
     public function index(Request $request)
-    {         
-    $bairro   = ($request->get('bairro') == null ? "" : $request->get('bairro') );  
-    $dados    =  new Dados;
-    $users    =  $this->user->Dados();
-
-
-      if($bairro){         
-          $users = $this->user->filtro($bairro);
-      
-      }
+    { 
         
+    $dados    =  new Dados;
+    $users    =  ($request->get('bairro') == null
+     ? 
+    $this->user->Dados() : 
+      $this->user->filtro($request->get('bairro')));  
+
     return view('site.template.template',compact('users'));
     }
 
