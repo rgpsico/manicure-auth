@@ -10,8 +10,7 @@
     <nav aria-label="breadcrumb">
       <ul class="breadcrumb" style="margin-top:120px;">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Detail</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Mobile</li>
+        <li class="breadcrumb-item"><a href="#">Detalhes</a></li>
       </ul>
     </nav>
   </div>

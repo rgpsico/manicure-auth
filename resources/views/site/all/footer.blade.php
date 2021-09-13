@@ -17,12 +17,13 @@
       
         <div class="row">
           <div class="col-lg-3 col-md-3 m-b-30">
-            <h3 class="mb-3">Ajuda</h3>
+            <!--<h3 class="mb-3">Ajuda</h3>
             <ul class="p-0">
             <li><a href="#">Sobre</a></li>
             <li><a href="#">nosso Blog</a></li>
             <li><a href="#">Ajuda</a></li>
             <li><a href="#">Contato</a></li>
+            -->
           
             </ul>
           </div>
@@ -61,7 +62,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p class="mt-3 mb-3 copyright">&copy;Copyright 2000-2018 example.com Limited. All rights reserved </p>
+            <p class="mt-3 mb-3 copyright">&copy;Copyright <a href="https://rogerneves.com.br">Roger Neves</a>. Todos os direitos reservados </p>
           </div>
         </div>
       </div>

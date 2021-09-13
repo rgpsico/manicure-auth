@@ -19,7 +19,7 @@
   <div class="header">
     <div class="container po-relative">
       <nav class="navbar navbar-expand-lg hover-dropdown header-nav-bar"> 
-          <a href="01-Home-Page.html" class="navbar-brand">
+          <a href="/" class="navbar-brand">
               <img src="{{url("assets/site/images/logo.png")}}" alt="Classified Plus"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
          data-target="#h5-info" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>

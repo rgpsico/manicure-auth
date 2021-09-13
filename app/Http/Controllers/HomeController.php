@@ -88,4 +88,23 @@ class HomeController extends Controller
     }
 
 
+    public function config()
+    {
+        
+        return view('config');
+    }
+
+    public function configStore(Request $request)
+    {        
+    
+    }
+
+
+    public function admin()
+    {
+        $users = User::all();
+       return view('admin',compact('users'));     
+    }
+
+
 }

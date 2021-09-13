@@ -71,6 +71,7 @@ class User extends Authenticatable
         ->where('id_user',$id)
         ->where('status','ativado')
         ->first();
+    
     }
 
     public function Album($id)

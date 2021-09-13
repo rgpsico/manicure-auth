@@ -32,3 +32,6 @@ Route::post('/editar/update/{id}', [HomeController::class, 'update']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/config', [App\Http\Controllers\HomeController::class, 'config'])->name('config');
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
+Route::post('/configStore', [App\Http\Controllers\HomeController::class, 'configStore'])->name('configStore');
